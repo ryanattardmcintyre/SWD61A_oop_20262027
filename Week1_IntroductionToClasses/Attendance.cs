@@ -43,5 +43,16 @@ namespace Week1_IntroductionToClasses
             lastModified = DateTime.Now;
         }
 
+        public int WorkoutNumberOfDaysPassed()
+        {
+            return DateTime.Now.Subtract(lastModified).Days;
+
+        }
+
+        public int WorkoutNumberOfDaysPassedSinceDay(DateTime dt)
+        {
+            return dt.Subtract(lastModified).Days;
+        }
+
     }
 }

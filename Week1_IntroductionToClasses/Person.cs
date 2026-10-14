@@ -45,6 +45,21 @@ namespace Week1_IntroductionToClasses
     //public - is accessible from everywhere
     public class Person //table: Persons will be generated automatically
     {
+        //constructor:
+        //Why do we use the consturctor:
+        //1) to allow someone external to this class (a developer, service, more code) can instantiate
+        //   an object of this class type
+        //2) to run code as soon as the object is created
+        public Person(string _name, string _surname)
+        {
+            dateOfBirth = DateTime.Now;
+
+            //reading the parameters' value and assign them into the properties => fields
+            Name = _name;
+            Surname = _surname;
+        }
+
+
         //fields:
         string name;
         string surname;

@@ -12,19 +12,14 @@ Console.WriteLine("Hello, World!");
 Person myPerson; //declaration of an object of type Person named myPerson
 //myPerson.Name = "Test"; //you cannot store in an unitialized object
 
-myPerson = new Person();
-myPerson.Name = "Robert";
-myPerson.Surname = "Zammit";
+myPerson = new Person("Robert", "Zammit"); //you instantiate an instance of Person by calling the constructor
 myPerson.Active = true;
 myPerson.DateOfBirth = new DateTime(2000, 1, 1);
 
 
 Person myPerson2;
-myPerson2 = new Person();
-myPerson2.Name = "Joe";
-
-myPerson2 = myPerson;
-
+myPerson2 = new Person("Joe", "Abela");
+myPerson2.Name = "Maria";
 Console.WriteLine(myPerson2.Name);
 
 //Exercise:
