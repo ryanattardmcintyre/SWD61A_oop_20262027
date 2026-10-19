@@ -9,6 +9,12 @@ namespace Week2_InheritanceAndPolymorphism.Example3
 {
     public class Circle: Point
     {
+        //base => how to refer to the parent class (the class after the : )
+        public Circle(int x, int y, double radius, ConsoleColor color): base(x, y, color)
+        {
+            //Property = Parameter
+            Radius = radius;
+        }
         public double Radius { get; set; }
 
         public override string Draw()

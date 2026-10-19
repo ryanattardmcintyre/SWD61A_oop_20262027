@@ -25,6 +25,7 @@ namespace Week2_InheritanceAndPolymorphism.Example3
      * - methods Draw(): string => "This is a sphere at (x,y,z) with radius: r"
      * - methods FindArea() : double //Find surface area
      * - methods FindPerimeter() : double
+     * - method  FindVolume(): double
      * 
      * Create another class called Cylinder
      * - public properties: x, y, z, height, radius
@@ -32,11 +33,19 @@ namespace Week2_InheritanceAndPolymorphism.Example3
      * - methods Draw(): string => "This is a cylinder at (x,y,z) with radius: r & height : h"
      * - methods FindArea() : double 
      * - methods FindPerimeter() : double
+     * - method  FindVolume(): double
      */
 
 
     public class Point
     {
+        public Point(int x, int y, ConsoleColor color) 
+        {
+            X = x;
+            Y = y;
+            Colour = color;
+        }
+
         protected ConsoleColor Colour { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
