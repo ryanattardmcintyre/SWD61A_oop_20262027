@@ -8,10 +8,11 @@ List<Point> shapes = new List<Point>(); //will allow us to store any object of t
 int choice = 9;
 do
 {
+    Console.ResetColor();
     Console.Clear();
     Console.WriteLine("1. Add new shape");
     Console.WriteLine("2. Print details");
-
+    Console.WriteLine("3. Find Areas of all shapes");
     Console.WriteLine("9. Quit");
 
     Console.WriteLine("Enter choice: ");
@@ -44,6 +45,44 @@ do
                     Point p = new Point(x, y, color);
                     shapes.Add(p);
                     break;
+
+                case 2: //adding a circle
+
+                    Console.Clear();
+                    Console.WriteLine("Input x");
+                    x = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Input y");
+                    y = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Write the name of the color");
+                    color = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Console.ReadLine());
+
+                    Console.WriteLine("Input radius for circle");
+                    double radius = double.Parse(Console.ReadLine());
+
+
+                    Circle c = new Circle(x, y, radius, color);
+                    shapes.Add(c);
+
+                    break;
+
+                case 3: //adding a circle
+
+                    Console.Clear();
+                    Console.WriteLine("Input x");
+                    x = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Input y");
+                    y = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Write the name of the color");
+                    color = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), Console.ReadLine());
+
+                    Console.WriteLine("Input radius for circle");
+                    radius = double.Parse(Console.ReadLine());
+
+
+                    Sphere sp = new Sphere(x, y, 1, radius, color);
+                    shapes.Add(sp);
+
+                    break;
             }
             break;
 
@@ -56,11 +95,28 @@ do
                 Console.WriteLine();
             }
             break;
+        case 3:
+            //find areas of shapes
+            //Point <= Circle <= Sphere ...
+            //note: Circle is a Point because it inherits from Point
+            //      but Point is not a circle because Point does not inherit from Circle
+            foreach (Point s in shapes)
+            {
+                if (s is Circle)
+                {
+                    Circle myCircle = (Circle)s; //type-casting
 
+                    Console.WriteLine($"Area of shape {myCircle.GetType().Name} " +
+                        $"with radius {myCircle.Radius} is " + myCircle.FindArea());
+                }
+            }
+
+            break;
         default:
             break;
     }
 
+    Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine("Press any key to continue...");
     Console.ReadKey();
 
