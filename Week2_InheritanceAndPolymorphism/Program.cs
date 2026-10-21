@@ -3,6 +3,9 @@ using Week1_IntroductionToClasses;
 using Week2_InheritanceAndPolymorphism;
 using Week2_InheritanceAndPolymorphism.Example3;
 
+//Point <= Circle <= Sphere <= Cylinder <= Cone
+
+
 List<Point> shapes = new List<Point>(); //will allow us to store any object of type Point or of any classes which
                                         //inherit from Point i.e.Circle/Sphere/Cylinder
 int choice = 9;
@@ -13,6 +16,8 @@ do
     Console.WriteLine("1. Add new shape");
     Console.WriteLine("2. Print details");
     Console.WriteLine("3. Find Areas of all shapes");
+    Console.WriteLine("4. Find Perimeters of all shapes");
+    Console.WriteLine("5. Find Volumes of all shapes");
     Console.WriteLine("9. Quit");
 
     Console.WriteLine("Enter choice: ");
@@ -28,6 +33,8 @@ do
             Console.WriteLine("1. Point");
             Console.WriteLine("2. Circle");
             Console.WriteLine("3. Sphere");
+            Console.WriteLine("4. Cylinder");
+            Console.WriteLine("5. Cone");
             Console.WriteLine("Enter choice: ");
             int shape = int.Parse(Console.ReadLine());
 
@@ -105,7 +112,7 @@ do
                 if (s is Circle)
                 {
                     Circle myCircle = (Circle)s; //type-casting
-
+                    
                     Console.WriteLine($"Area of shape {myCircle.GetType().Name} " +
                         $"with radius {myCircle.Radius} is " + myCircle.FindArea());
                 }
