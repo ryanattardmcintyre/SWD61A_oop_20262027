@@ -8,6 +8,26 @@ namespace Week2_InheritanceAndPolymorphism.Example4
 {
     public class DigitalFile
     {
+        public DigitalFile() { Filename = ""; }
+
+        public DigitalFile(string filename)
+        { Filename = filename.ToLower(); Size = 0; }
+
+        public DigitalFile(int size, string filename)
+        {
+            Size = size;
+        }
+
+        //this? this is a reserved word referring to the current instantiated object
+
+        //in the following constructor, the order of calls will be
+        //1) calling the prior constructor i.e the one that has just one parameter
+        //2) it calls the current constructor i.e. the one with two parameters
+        public DigitalFile(string filename, byte[] defaultContent): this(filename)
+        {
+            this.content = defaultContent;
+        }
+
         //Field
         protected byte[] content;
 

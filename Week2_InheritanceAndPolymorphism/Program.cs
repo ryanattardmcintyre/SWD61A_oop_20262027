@@ -2,6 +2,8 @@
 using Week1_IntroductionToClasses;
 using Week2_InheritanceAndPolymorphism;
 using Week2_InheritanceAndPolymorphism.Example3;
+using Week2_InheritanceAndPolymorphism.Example4;
+
 
 //Point <= Circle <= Sphere <= Cylinder <= Cone
 

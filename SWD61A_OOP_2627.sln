@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week1_IntroductionToClasses
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week2_InheritanceAndPolymorphism", "Week2_InheritanceAndPolymorphism\Week2_InheritanceAndPolymorphism.csproj", "{689D5705-7BBD-446F-831C-19491041793C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week3_InterfacesAndAbstract", "Week3_InterfacesAndAbstract\Week3_InterfacesAndAbstract.csproj", "{DFE05CE6-A6C4-457F-AF36-0A1B9CA9DFB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{689D5705-7BBD-446F-831C-19491041793C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{689D5705-7BBD-446F-831C-19491041793C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{689D5705-7BBD-446F-831C-19491041793C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE05CE6-A6C4-457F-AF36-0A1B9CA9DFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE05CE6-A6C4-457F-AF36-0A1B9CA9DFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE05CE6-A6C4-457F-AF36-0A1B9CA9DFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE05CE6-A6C4-457F-AF36-0A1B9CA9DFB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
