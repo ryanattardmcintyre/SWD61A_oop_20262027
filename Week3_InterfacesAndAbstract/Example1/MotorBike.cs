@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Week3_InterfacesAndAbstract.Example1
 {
     public enum LicenseType { A1, A2, A}
-    public class MotorBike
+    public class MotorBike: IVehicle
     {
         public LicenseType LicenseType { get; set; }
         public string NumberPlate { get; set; }
@@ -38,7 +38,6 @@ namespace Week3_InterfacesAndAbstract.Example1
         public bool Container { get; set; }
         public int PersonsOnBike { get; set; }
 
-        public 
-       
+        
     }
 }

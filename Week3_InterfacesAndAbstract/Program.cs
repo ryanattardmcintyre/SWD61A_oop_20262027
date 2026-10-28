@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using Week3_InterfacesAndAbstract.Example2;
+
+CardPayment myCardPayment = new CardPayment();
+

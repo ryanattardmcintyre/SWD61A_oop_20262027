@@ -8,7 +8,7 @@ namespace Week3_InterfacesAndAbstract.Example1
 {
     public enum EngineType { Diesel, Petrol, Hybrid, EV}
     public enum Category { SUV, Saloon, Hatchback, Convertible, Compact, Large}
-    public class Vehicle
+    public class Vehicle : IVehicle
     {
         public string NumberPlate { get; set; }
         public string VIN { get; set; }

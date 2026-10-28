@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Week3_InterfacesAndAbstract.Example1
 {
-    public class Truck
+    public class Truck: IVehicle
     {
         public string NumberPlate { get; set; }
         public string VIN { get; set; }
